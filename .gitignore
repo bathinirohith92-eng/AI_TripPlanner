@@ -1,0 +1,96 @@
+# ==============================
+# React Frontend
+# ==============================
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ==============================
+# Flask Backend
+# ==============================
+backend/__pycache__/
+backend/*.py[cod]
+backend/*.pyo
+backend/*.pyd
+backend/*.pkl
+backend/*.log
+backend/instance/
+backend/*.db
+backend/*.sqlite3
+backend/flask_session/
+backend/venv/
+backend/env/
+backend/.venv/
+backend/ENV/
+backend/.env
+
+# ==============================
+# Sensitive / Unwanted folders
+# ==============================
+backend/keys/
+backend/static/
+frontend/static/
+fin_planner/
+
+# ==============================
+# Editor / OS junk
+# ==============================
+.DS_Store
+Thumbs.db
+.vscode/
+../.idea/
+*.swp
+*.swo
+
+# ==============================
+# GCP / Deployment / Credentials
+# ==============================
+.gcloudignore
+*.tar.gz
+*.zip
+*.key.json
+service-account.json
+google-cloud-sdk/
+credentials.json
+
+# ==============================
+# Misc
+# ==============================
+logs/
+tmp/
+uploads/
+__MACOSX/
+
+
+# Node / React
+node_modules/
+build/
+dist/
+.vscode/
+.DS_Store
+.env
+*.log
+
+# Backend
+__pycache__/
+*.pyc
+backend/keys/
+backend/static/
+
+# Misc
+*.sqlite3
+.env.local
+.env.production
+
+
+# Ignore sensitive files
+backend/.env
+backend/keys/
+__pycache__/
+node_modules/
+static/

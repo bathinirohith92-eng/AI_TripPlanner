@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Unified design system: Ocean Blue (primary) + Coral Accent (highlight) */
+
+@layer base {
+  :root {
+    /* Core background and text */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 20%;
+
+    /* Component surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    /* ✅ Primary brand color (Ocean Blue) */
+    --primary: 205 87% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 205 87% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* 🌅 Added accent color (Coral for highlights) */
+    --highlight: 15 85% 60%;
+    --highlight-foreground: 0 0% 100%;
+
+    /* Accent shades (for gradients or subtle UI elements) */
+    --accent: 205 87% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Muted tones */
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 15% 50%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders, inputs */
+    --border: 220 15% 90%;
+    --input: 220 15% 93%;
+    --ring: 205 87% 45%;
+
+    /* Gradients */
+    --gradient-brand: linear-gradient(
+      135deg,
+      hsl(205 87% 45%) 0%,
+      hsl(205 87% 65%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(205 87% 45%) 0%,
+      hsl(15 85% 60%) 100%
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(0 0% 100%) 0%,
+      hsl(210 40% 98%) 100%
+    );
+    --gradient-cta: linear-gradient(
+      135deg,
+      hsl(205 87% 45%) 0%,
+      hsl(15 85% 60%) 100%
+    );
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(205 87% 40% / 0.1);
+    --shadow-medium: 0 8px 30px -4px hsl(205 87% 40% / 0.15);
+    --shadow-strong: 0 20px 60px -10px hsl(205 87% 40% / 0.25);
+    --shadow-glow: 0 0 40px hsl(15 85% 60% / 0.3);
+
+    --radius: 1rem;
+
+    /* Sidebar */
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 220 15% 20%;
+    --sidebar-primary: 205 87% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 205 87% 96%;
+    --sidebar-accent-foreground: 205 87% 25%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 205 87% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar:hover::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+  }
+  .hide-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 10px;
+  }
+
+  /* Mobile touch-friendly utilities */
+  @media (max-width: 640px) {
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Prevent text selection on interactive elements */
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Smooth scrolling for mobile */
+  @media (max-width: 1024px) {
+    .overflow-x-auto {
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+  }
+}

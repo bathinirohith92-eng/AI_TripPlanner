@@ -1,0 +1,12 @@
+runtime: python312
+entrypoint: gunicorn -b :$PORT fin_planner.app:app
+
+env_variables:
+  GOOGLE_APPLICATION_CREDENTIALS: "fin_planner/keys/tripplanner-472707-e738f9916120.json"
+
+handlers:
+  - url: /static
+    static_dir: fin_planner/static
+
+  - url: /.*
+    script: auto

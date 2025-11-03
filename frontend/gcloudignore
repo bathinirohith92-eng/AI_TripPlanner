@@ -1,0 +1,19 @@
+# Default files to ignore when deploying with gcloud
+
+# Node modules
+node_modules/
+
+# Source files and configs
+src/
+public/
+.git/
+.gitignore
+README.md
+package-lock.json
+package.json
+vite.config.ts
+tsconfig.json
+tailwind.config.ts
+postcss.config.js
+eslint.config.js
+components.json
